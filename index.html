@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+  </style>
+  <link rel='stylesheet' href='styles.css' >
+  <title>splitter</title>
+  <script src='scripts.js' defer></script>
+
+</head>
+<body>
+  <h1 class='title'>SPLITTER</h1>
+  <div class='splitter'>
+    <div class='left-column'>
+      <div class='bill-div'>
+        <h3>Bill</h3>
+        <div class='input-wrapper'>
+          <img src='/images/icon-dollar.svg' class='icon'>
+          <input data-price type='number' class='left-input' placeholder='0'>
+        </div>
+      </div>
+
+      <div class='tip-percent-div'>
+        <h3>Select Tip %</h3>
+        <div class='tip-percent'>
+          <button data-percentage class='percentage-button'>5%</button>
+          <button data-percentage class='percentage-button'>10%</button>
+          <button data-percentage class='percentage-button'>15%</button>
+          <button data-percentage class='percentage-button'>25%</button>
+          <button data-percentage class='percentage-button'>50%</button>
+          <input data-percentage-custom type="number" class="custom-percentage" placeholder="Custom">  
+        </div>
+      </div>
+      <div class='people-number-div'>
+        <h3>Number of People</h3>
+        <div class='input-wrapper'>
+          <img src='/images/icon-person.svg' class='icon'>
+          <input data-people type='number' class='left-input' placeholder='0'>
+        </div>
+      </div>
+    </div> 
+    <div class='right-column'>
+      <div class='total-div'>
+        <div class='total-text'>
+          <h3 class='total-type'>Tip Amount</h3>
+          <p class='divide'>/ person</p>
+        </div>
+        <p data-tip-per-person class='total tip-total'>$ 0</p>
+      </div>
+      <div class='total-div'>
+        <div class='total-text'>
+          <h3 class='total-type'>Total</h3>
+          <p class='divide'>/ person</p>
+        </div>
+        <p data-total-per-person class='total full-total'>$ 0</p>
+      </div>  
+      <button data-reset class='button'>RESET</button>
+    </div>
+  </div>
+</body>
+</html>
