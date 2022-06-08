@@ -54,21 +54,30 @@ percentageButtons.forEach(button => {
     })
 })
 
-totalPrice.addEventListener('input', () => {
-    totalPrice.value = document.querySelector('[data-price]').value
-    splitter.input()
-})
+totalPrice.addEventListener("input", () => {
+    totalPrice.value =
+        document.querySelector("[data-price]").value > 0
+            ? document.querySelector("[data-price]").value
+            : 0;
+    splitter.input();
+});
 
-peopleNumber.addEventListener('input', () => {
-    peopleNumber.value = document.querySelector('[data-people]').value
-    splitter.input()
-})
+peopleNumber.addEventListener("input", () => {
+    peopleNumber.value =
+        document.querySelector("[data-people]").value > 0
+            ? document.querySelector("[data-people]").value
+            : 0;
+    splitter.input();
+});
 
-customPercentage.addEventListener('input', () => {
-    unselect()
-    customPercentage.value = document.querySelector('[data-percentage-custom]').value
-    splitter.calculate(customPercentage.value/100)
-})
+customPercentage.addEventListener("input", () => {
+    unselect();
+    customPercentage.value =
+        document.querySelector("[data-percentage-custom]").value > 0
+            ? document.querySelector("[data-percentage-custom]").value
+            : 0;
+    splitter.calculate(customPercentage.value / 100);
+});
 
 resetButton.addEventListener('click', () => {
     customPercentage.value = ''
